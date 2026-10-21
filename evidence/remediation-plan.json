@@ -1,0 +1,8 @@
+{
+  "device": "CORE-SW1",
+  "action": "REPLACE_SIMULATED_CONFIG",
+  "baseline_sha256": "ba4b4bda63dba1b1236a622f9939eec1ac5484df40a7580d2e894abdd7c7a8c0",
+  "observed_sha256": "bd0c883a4ac95d0634712a8baa6ee52d5e90ceaab91e50c4e04eb7ddfe42b171",
+  "diff": "--- observed\n+++ baseline\n@@ -13,11 +13,13 @@\n  ip address 10.10.0.1 255.255.255.0\n interface Vlan30\n  ip address 10.30.0.1 255.255.255.0\n+ ip access-group GUEST_FILTER in\n interface Vlan40\n  ip address 10.40.0.1 255.255.255.0\n interface Vlan99\n  ip address 10.99.0.1 255.255.255.0\n ip access-list extended GUEST_FILTER\n+ deny ip 10.30.0.0 0.0.0.255 10.99.0.0 0.0.0.255\n  permit ip any any\n router ospf 10\n  network 10.0.0.0 0.255.255.255 area 0\n",
+  "warning": "Simulation only. Never applies configurations to physical devices."
+}

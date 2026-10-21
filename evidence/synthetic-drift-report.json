@@ -1,0 +1,34 @@
+{
+  "devices": 3,
+  "findings": [
+    {
+      "device": "CORE-SW1",
+      "rule": "CONFIG_DRIFT",
+      "severity": "medium",
+      "detail": "Observed config differs from approved baseline"
+    },
+    {
+      "device": "CORE-SW1",
+      "rule": "GUEST_MGMT_ISOLATION",
+      "severity": "critical",
+      "detail": "Guest-to-management deny ACL not present"
+    },
+    {
+      "device": "CORE-SW1",
+      "rule": "GUEST_ACL_BINDING",
+      "severity": "critical",
+      "detail": "Guest ACL not applied inbound"
+    }
+  ],
+  "finding_count": 3,
+  "baseline_hashes": {
+    "ACCESS-SW1": "2c361199220ec077365b46fe0d57ba9f5b0a051672bda5f492c6bb293e1f8d2a",
+    "CORE-SW1": "ba4b4bda63dba1b1236a622f9939eec1ac5484df40a7580d2e894abdd7c7a8c0",
+    "EDGE-R1": "5ca00fc8d42f2345f7e16542541256a035a1e8fc58432947216dee699401160a"
+  },
+  "observed_hashes": {
+    "ACCESS-SW1": "2c361199220ec077365b46fe0d57ba9f5b0a051672bda5f492c6bb293e1f8d2a",
+    "CORE-SW1": "bd0c883a4ac95d0634712a8baa6ee52d5e90ceaab91e50c4e04eb7ddfe42b171",
+    "EDGE-R1": "5ca00fc8d42f2345f7e16542541256a035a1e8fc58432947216dee699401160a"
+  }
+}

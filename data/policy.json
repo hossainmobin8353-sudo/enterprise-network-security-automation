@@ -1,0 +1,26 @@
+{
+  "devices": [
+    "EDGE-R1",
+    "CORE-SW1",
+    "ACCESS-SW1"
+  ],
+  "forbidden_patterns": [
+    "^\\s*no service password-encryption\\s*$",
+    "^\\s*transport input telnet\\s*$"
+  ],
+  "required_lines": {
+    "EDGE-R1": [
+      "router ospf 10",
+      "service password-encryption"
+    ],
+    "CORE-SW1": [
+      "ip routing",
+      "router ospf 10",
+      "service password-encryption"
+    ],
+    "ACCESS-SW1": [
+      "switchport mode trunk",
+      "service password-encryption"
+    ]
+  }
+}
